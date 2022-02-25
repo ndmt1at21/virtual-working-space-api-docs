@@ -1,10 +1,11 @@
 import { JsonObject } from 'swagger-ui-express';
+import { basicInfo } from '../basicInfor';
+import { apis } from './auth.api';
+import { schemas } from './auth.schemas';
 
 export const authDocs: JsonObject = {
-	openapi: '3.0.3',
-	info: {
-		title: 'Test CRUD',
-		description: 'Test CRUD Docs',
-		version: '1.0.0'
-	}
+	...{ schemes: ['http'] },
+	...basicInfo,
+	...schemas,
+	...apis
 };
