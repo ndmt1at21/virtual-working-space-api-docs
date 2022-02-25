@@ -1,1 +1,5 @@
-# virtual-working-space-api-docs
+# How to run
+
+```
+npm run start
+```
