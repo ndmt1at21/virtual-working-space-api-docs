@@ -7,4 +7,4 @@ Open [http://localhost:8001](http://localhost:8001) to view it in the browser.
 
 ## APIs
 
-Server: [orangehrm2.xyz](orangehrm2.xyz)
+Server: [orangehrm2.xyz](http://orangehrm2.xyz)
