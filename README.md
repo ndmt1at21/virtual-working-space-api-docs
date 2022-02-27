@@ -7,4 +7,5 @@ Open [http://localhost:8001](http://localhost:8001) to view it in the browser.
 
 ## APIs
 
-Server: [orangehrm2.xyz](http://orangehrm2.xyz)
+Server: [api.vispace.tech](https://api.vispace.tech/)
+Sub: /api/v1
