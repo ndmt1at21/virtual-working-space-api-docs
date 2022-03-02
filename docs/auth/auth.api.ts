@@ -92,7 +92,7 @@ const resetToken = {
 		produces: ['application/json'],
 		parameters: [
 			{
-				in: 'query',
+				in: 'params',
 				name: 'token',
 				required: true,
 				type: 'string',
@@ -124,6 +124,35 @@ const resetToken = {
 	}
 };
 
+const activateToken = {
+	get: {
+		tags: [TAGS],
+		description: 'Active new account',
+		consumes: ['application/json'],
+		produces: ['application/json'],
+		parameters: [
+			{
+				in: 'params',
+				name: 'token',
+				required: true,
+				type: 'string',
+				example: 'AaTaS13AJKD85k4'
+			}
+		],
+		responses: {
+			'200': {
+				description: 'Account is activated'
+			},
+			'404': {
+				description: 'Invalid token'
+			},
+			'500': {
+				description: 'Internal server error'
+			}
+		}
+	}
+};
+
 export const apis: JsonObject = {
 	basePath: '134434',
 	paths: {
@@ -139,8 +168,11 @@ export const apis: JsonObject = {
 		'/auth/forgot': {
 			...forgotPassword
 		},
-		'/auth/reset?token={token}': {
+		'/auth/reset/:token': {
 			...resetToken
+		},
+		'/auth/activate/:token': {
+			...activateToken
 		}
 	}
 };
